@@ -9,6 +9,7 @@ import { Link } from "react-router-dom"
 import { Formik } from "formik"
 import useAuthCall from "../hooks/useAuthCall"
 import LoginForm, { loginScheme } from "../components/LoginForm"
+import ReportIcon from '@mui/icons-material/Report';
 
 const Login = () => {
   const { login } = useAuthCall()
@@ -63,7 +64,11 @@ const Login = () => {
 
           <Box sx={{ textAlign: "center", mt: 2 }}>
             <Link to="/register">Do you have not an account?</Link>
-          </Box>
+          </Box><Link to="/stock">
+          
+          <Box sx={{ textAlign: "center", mt: 2, bgcolor:"red", color:"white", padding:"30px", borderRadius:"50px", fontWeight:"500",fontSize:"larger",display:"flex" }}><Box ><ReportIcon sx={{width:"50px",height:"80px"}}/></Box>
+            Hey! Currently the backend is down so you can't perform API operations. BUT I would like you to examine the site by clicking here.
+          </Box></Link>
         </Grid>
 
         <Grid item xs={10} sm={7} md={6}>
